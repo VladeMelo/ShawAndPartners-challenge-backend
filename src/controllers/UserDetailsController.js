@@ -7,8 +7,7 @@ class UserDetailsController {
 
     const responseAxios = await axios({
       method: 'get',
-      url: `${api.url}`,
-      params: { username }
+      url: `${api.url}/${username}/details`
     })
     .then(response => response.data)
     .catch(() => console.log('FAIL'))
